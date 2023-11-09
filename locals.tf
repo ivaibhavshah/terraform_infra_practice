@@ -19,11 +19,11 @@ locals {
   caching_policy_for_cf = "658327ea-f89d-4fab-a63d-7e88639e58f6"
   codebuild_env ={
     AWS_DEFAULT_REGION="ap-south-1"
-    AWS_ACCOUNT_ID="375266390002"
+    AWS_ACCOUNT_ID= ${AWS_ACCOUNT_ID}
     IMAGE_REPO_NAME="prod-test_project"
     IMAGE_TAG="latest"
     DockerFilePath="Dockerfile"
     CONTAINER_NAME="prod-ECS-Container"
-    REPOSITORY_URI="375266390002.dkr.ecr.ap-south-1.amazonaws.com/prod-test_project"
+    REPOSITORY_URI="${REPOSITORY_URI}"
     }  
 }
